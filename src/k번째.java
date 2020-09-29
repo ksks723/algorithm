@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Algorithm {
+public class k번째 {
     public static int[] solution(int[] array, int[][] commands) {
         int[] answer = new int[commands.length];
         int index = 0 ;
