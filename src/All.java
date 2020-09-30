@@ -13,4 +13,13 @@ public class All {
 
         return null;
     }
+
+    public static void main(String[] args) {
+        String[] people = {"Mike","Anna","Mike","Harry","Herry"};
+        Map<String, Integer> map = new HashMap<>();
+        for(String a : people) {
+            map.put(a, map.getOrDefault(a, 0)+1);
+            System.out.println("뭐가나올까나" + map);
+        }
+    }
 }
