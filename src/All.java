@@ -1,11 +1,16 @@
-import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
 
 public class All {
-    public static void main(String[] args) {
+    public String solution(String[] participant, String[] completion) {
+        Map<String, Integer> hash = new HashMap<>();
+        for (String arg : participant) hash.put(arg, hash.getOrDefault(arg, 0) + 1);
+        for (String arg : completion) hash.put(arg, hash.get(arg) - 1);
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("입력하세요");
-        String why = sc.nextLine();
-        System.out.println(why);
+        for (String key : hash.keySet()) {
+            if (hash.get(key) != 0) return key;
+        }
+
+        return null;
     }
 }
