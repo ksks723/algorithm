@@ -1,3 +1,5 @@
+package k번째선수;
+
 import java.util.Arrays;
 
 public class k번째 {
