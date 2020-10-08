@@ -6,9 +6,9 @@ class Solution {
     public int[] solution(int []arr) {
         int[] answer = {};
         ArrayList<Integer> list = new ArrayList<>();
-        for(int i = 0; i<arr.length-1; i++){
+        for(int i = 1; i<arr.length; i++){
 
-            if(arr[i]!=arr[i+1]  ){
+            if(arr[i-1]!=arr[i]  ){
                 list.add(arr[i]);
             }
 
