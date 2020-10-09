@@ -1,6 +1,7 @@
 package 같은숫자는싫어;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 class Solution { //내가 풀고있는거
     public int[] solution(int[] arr) {
@@ -27,5 +28,6 @@ class Main {
         for(int j : answer){
             System.out.println(j);
         }
+        System.out.println(Arrays.toString(answer)); //배열값 한번에 뽑기
     }
 }
