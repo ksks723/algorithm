@@ -25,14 +25,16 @@ public class Solution { //이거 이해하고 함수사용하는 코드로 넘�
         }
         for(int i = 1;i<=N;i++){
             for(Integer integer : copySta){
+                    System.out.println("if문 전입니다!!!!!!!!"+"integer: "+integer+" i: "+i);
                 if(integer == i){
+                    System.out.println("integer: "+integer+" i: "+i);
                     failCount[i]++;
                 }
             }
         }
         for(int i = 1;i<failCount.length;i++){
-            System.out.println("failCount : "+failCount[i] + "stagesCount : "+stagesCount+
-                    "p : "+(double)failCount[i]/stagesCount);
+            System.out.println("failCount : "+failCount[i] + " stagesCount : "+stagesCount+
+                    " p : "+(double)failCount[i]/stagesCount);
             failP[i]=(double)failCount[i]/stagesCount;
             stagesCount -= failCount[i];
         }
@@ -69,7 +71,7 @@ public class Solution { //이거 이해하고 함수사용하는 코드로 넘�
 class Main{
     public static void main(String[] args) {
         Solution s = new Solution();
-        int[] answer = s.solution(4,new int[]{4,4,4,4});
+        int[] answer = s.solution(4,new int[]{2,3,1,4,2,1,5});
         System.out.println(Arrays.toString(answer));
     }
 }
