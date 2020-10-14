@@ -8,15 +8,13 @@ public class Solution {
             for(int j =0;j<reserve.length;j++){
                 if(lost[i] == reserve[j]){
                     lp++;
-                    System.out.println("lost["+lost[i]+"]  "+"lost["+reserve[j]+"]  11111");
+                    System.out.println("lost["+lost[i]+"]  "+"reserve["+reserve[j]+"]  11111");
                     lost[i] = -1;
                     reserve[j] =-1;
                     break; //자신이 포함된 가장가까운 반복문을 벗어난다.
                 }
             }
         }
-
-
         for(int i =0;i< reserve.length;i++){
             for(int j=0;j<lost.length;j++){
                 if(reserve[i]+1 == lost[j] ||reserve[i]-1 ==lost[j]){
@@ -29,7 +27,6 @@ public class Solution {
                 }
             }
         }
-
         return answer+lp;
     }
 }
