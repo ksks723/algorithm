@@ -6,12 +6,14 @@ public class Solution {
         char[] ch = s.toCharArray();
         int tt = (int)ch[0];
 
-        for(int i =1;i <= ch.length-1;i++){   //bcdefgZ 왜 이렇게 나오니
-            if(tt<(int)ch[i]){
-                tt =(int)ch[i];
-                char c = ch[i-1];
-                ch[i-1] = ch[i];
-                ch[i] = c;
+        for(int i =ch.length-1;i>0;i--){   //bcdefgZ 왜 이렇게 나오니 //버블정렬제대로 안해서 이렇게나옴
+            for(int j=0; j<i; j++){
+                if((int)ch[j]<(int)ch[j+1]){
+                    tt=(int)ch[j];
+                    char c = ch[j];
+                    ch[j] = ch[j+1];
+                    ch[j+1] = c;
+                }
             }
         }
         for(int i =0;i<ch.length;i++){
