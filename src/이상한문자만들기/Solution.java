@@ -1,18 +1,26 @@
 package 이상한문자만들기;
 
+import java.util.ArrayList;
+
 public class Solution {
-    public String solution(String s){
-        String answer = "";
+    public String solution(String s) {  //안되는 거 이유 파악하기
+        ArrayList<String> list = new ArrayList<>();
         String[] arr = s.split(" ");
-        for(int i = 0; i<arr.length;i++){
-            for(int j=0; j<arr[i].length();j++){
-                if(arr[i].charAt(j)%2==0){
-                    char c = Character.toUpperCase(arr[i].charAt(j));
-                    System.out.println(c);
+        for (int i = 0; i < arr.length; i++) {
+            String answer = "";
+            String[] index = arr[i].split("");
+
+            for (int j = 0; j < index.length; j++) {
+                if (j % 2 == 0) {
+                    answer += index[j].toUpperCase();
+                } else {
+                    answer += index[j].toLowerCase();
                 }
             }
+            list.add(answer);
         }
-        return answer;
+
+        return String.join(" ", list);
     }
 
     public static void main(String[] args) {
