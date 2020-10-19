@@ -15,19 +15,10 @@ public class Solution {
         return answer;
     }
 
-    public static void main(String[] args) {
-        Solution s= new Solution();
-        int answer = s.solution(new int[]{1,3,2,5,4},9);
-        System.out.println(answer);
-    }
-
-
-    /*  내가하려던거 정확성 반타작
-
-    class Solution {
-  public int solution(int[] d, int budget) { //[1,3,2,5,4]	9	3
+    public int solution2(int[] d, int budget) { //sort의 중요성.. (내가푼거)
         int answer = 0;
         int sum =0;
+        Arrays.sort(d);
         for(int g : d){
             if(sum+g == budget){
                 ++answer;
@@ -41,7 +32,14 @@ public class Solution {
         }
         return answer;
     }
-}
 
-    */
+    public static void main(String[] args) {
+        Solution s= new Solution();
+        int answer = s.solution(new int[]{1,3,2,5,4},9);
+        System.out.println(answer);
+    }
+
+
+
+
 }
