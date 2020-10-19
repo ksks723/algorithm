@@ -1,18 +1,24 @@
 package B_별찍기;
 
+import java.util.*;
+
 public class Main {
-    public void solution(int n) {
-        for (int i = 0; i<n ; i++) {
-            for (int j = n; j < n; j++) {
-                System.out.print(" ");
+    public static void main(String[] args){
+
+        Scanner scan = new Scanner(System.in);
+
+        int num = scan.nextInt();
+
+        for (int i = 1; i<=num ; i++) {
+            for(int j=num;j>0;j--){
+
+                if(j<=i){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
             }
-            System.out.println("*");
-
+            System.out.println();
         }
-    }
-
-    public static void main(String[] args) {
-        Main m = new Main();
-        m.solution(5);
     }
 }
