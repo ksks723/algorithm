@@ -68,7 +68,7 @@ public class Solution { //이거 이해하고 함수사용하는 코드로 넘�
     }
 }
 
-class Main{
+class Mainf{
     public static void main(String[] args) {
         Solution s = new Solution();
         int[] answer = s.solution(4,new int[]{2,3,1,4,2,1,5});
