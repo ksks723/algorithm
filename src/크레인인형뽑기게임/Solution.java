@@ -1,9 +1,11 @@
 package 크레인인형뽑기게임;
 
+import java.util.Stack;
+
 public class Solution {
     public int solution(int[][] board, int[] moves) {
         int answer = 0;
-//
+        Stack<Integer> ss = new Stack<>();
 
 
         return answer;
