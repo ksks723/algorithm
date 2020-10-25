@@ -5,9 +5,18 @@ import java.util.Stack;
 public class Solution {
     public int solution(int[][] board, int[] moves) {
         int answer = 0;
+        int ii =0;
         Stack<Integer> ss = new Stack<>();
+        for(int i = 0; i< moves.length;i++){
+            for(int j = 0;j<board.length;j++){
+                if(board[j][moves[i]-1] != 0){
+                    ss.push(board[j][moves[i]-1]);
+                    break;
+                }
+            }
+        }
+        System.out.println(ss);
 
-        //ㅈ
         return answer;
     }
 
